@@ -1,3 +1,28 @@
+Makes a search request to DuckDuckGo, scrapes the results, and returns a JSON version. 
+
+JSON format:
+
+	{
+	  "definition": "definition text",
+	  "definition_source": "url for definition source",
+	  "image": "url for main search image",
+	  "results": [
+	    {
+		  "url": "url for results",
+		  "description": "text description of result",
+		  "sponsored": boolean
+		}  
+	  ]
+	  "related": [
+	    {
+		  "text": "description or related",
+		  "url": "url to related"
+		}
+	  ]
+	}
+
+Results for "Music":
+
 	{
 	  "definition": "Music is an art form consisting of sound and silence, expressed through time.",
 	  "definition_source": "https://duckduckgo.com/Music",
