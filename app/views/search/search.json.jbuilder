@@ -1,0 +1,5 @@
+json.definition @results[:definition]
+json.definition_source @results[:definition_source_url]
+json.image @results[:image]
+json.results @results[:results]
+json.related @results[:related]
