@@ -20,6 +20,14 @@ JSON format:
 		}
 	  ]
 	}
+	
+Notes for running PhantomJS on Heroku:
+
+1. add a .buildpacks file to the root directory of your app, with this:
+
+	# .buildpacks
+	https://github.com/stomita/heroku-buildpack-phantomjs.git
+	https://github.com/heroku/heroku-buildpack-ruby.git
 
 Results for "Music":
 
@@ -261,3 +269,4 @@ Results for "Music":
 	    }
 	  ]
 	}
+	
