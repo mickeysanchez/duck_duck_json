@@ -23,11 +23,20 @@ JSON format:
 	
 Notes for running PhantomJS on Heroku:
 
-First, add a .buildpacks file to the root directory of your app, with this:
+First, you need to install PhantomJS AND Ruby on Heroku. To do this you need to use multiple heroku buildpacks. Add a .buildpacks file to the root directory of your app, with this:
 
-	// .buildpacks
 	https://github.com/stomita/heroku-buildpack-phantomjs.git
 	https://github.com/heroku/heroku-buildpack-ruby.git
+	
+Second, you need to point your app to the PhantomJS executable files on Heroku. To do that, run these commands:
+
+	heroku config:set PATH="/usr/local/bin:/usr/bin:/bin:/app/vendor/phantomjs/bin"
+	heroku config:set LD_LIBRARY_PATH="/usr/local/lib:/usr/lib:/lib:/app/vendor/phantomjs/lib"
+	
+That should do it. If you run into an error, check your heroku logs. If you're getting the error "H14 no web processes running", try running:
+
+	 heroku ps:scale web=1
+	 
 
 Results for "Music":
 
