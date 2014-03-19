@@ -33,7 +33,7 @@ class SearchController < ApplicationController
     results
   end
   
-  # Grab definition if it exists.
+  # Grab definition.
   def parse_definition(doc)
     definition = ""
   
