@@ -36,7 +36,6 @@ Second, you need to point your app to the PhantomJS executable files on Heroku. 
 That should do it. If you run into an error, check your heroku logs. If you're getting the error "H14 no web processes running", try running:
 
 	 heroku ps:scale web=1
-	 
 
 Results for "Music":
 

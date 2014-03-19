@@ -63,6 +63,7 @@ class SearchController < ApplicationController
   # Grab image url. 
   def parse_image_url(doc)
     image_url = ""
+    
     if doc.css('.img_disambig')[0]
       image_url = "http:" + doc.css('.img_disambig')[0]["src"]
     end
