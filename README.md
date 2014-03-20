@@ -23,7 +23,11 @@ JSON format:
 	
 Notes for running PhantomJS on Heroku:
 
-First, you need to install PhantomJS AND Ruby on Heroku. To do this you need to use multiple heroku buildpacks. Add a .buildpacks file to the root directory of your app, with this:
+First, you need to install PhantomJS AND Ruby on Heroku. To do this you need to use multiple heroku buildpacks. First run this:
+
+	heroku config:add BUILDPACK_URL=https://github.com/ddollar/heroku-buildpack-multi.git
+
+Then add a .buildpacks file to the root directory of your app, with this:
 
 	https://github.com/stomita/heroku-buildpack-phantomjs.git
 	https://github.com/heroku/heroku-buildpack-ruby.git
